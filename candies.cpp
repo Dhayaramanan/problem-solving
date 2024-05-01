@@ -5,7 +5,7 @@
 // Both arrays can have distinct elements only if
 // no element in the original array is repeated more than twice.
 
-void get_prices(std::vector<int>& candy_prices, size_t size)
+void get_prices(std::vector<int>& candy_prices, const size_t size)
 {
     for (size_t i = 0; i < size; ++i)
     {
@@ -15,7 +15,7 @@ void get_prices(std::vector<int>& candy_prices, size_t size)
     }
 }
 
-bool is_possible_to_split(std::vector<int>& candy_prices, size_t size)
+bool is_possible_to_split(const std::vector<int>& candy_prices)
 {
     for (const auto& i : candy_prices)
     {
@@ -46,7 +46,7 @@ int main()
 
         get_prices(candy_prices, size);
 
-        std::cout << ((is_possible_to_split(candy_prices, size)) ? "YES" : "NO") << '\n';
+        std::cout << ((is_possible_to_split(candy_prices)) ? "YES" : "NO") << '\n';
     }
 
     return 0;
