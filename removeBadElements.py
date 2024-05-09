@@ -1,6 +1,3 @@
-from re import M
-
-
 def main():
     test_cases = int(input())
 
